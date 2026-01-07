@@ -8,6 +8,11 @@ class Solution {
                 list.add((int)(c-'0'));
             }
         }   
-        return list.stream().mapToInt(i->i).toArray();
+        int i=0;
+        int[] res= new int[list.size()];
+        for(int l:list){
+            res[i++]=l;
+        }
+        return res;//list.stream().mapToInt(i->i).toArray();
     }
 }
