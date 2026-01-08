@@ -13,9 +13,11 @@ class Solution {
         //System.out.println(list);
         int sum=0;
         for(int i=list.size()-1;i>0;i--){
-            int nos=map.get(list.get(i));
-            sum=  sum+ nos;
-            map.put(list.get(i-1), map.get(list.get(i-1))+nos);
+            sum += map.get(list.get(i)) * i;
+
+            // int nos=map.get(list.get(i));
+            // sum=  sum+ nos;
+            // map.put(list.get(i-1), map.get(list.get(i-1))+nos);
             // System.out.print(sum+" ");
             // System.out.println(map);
             // System.out.println(list);
