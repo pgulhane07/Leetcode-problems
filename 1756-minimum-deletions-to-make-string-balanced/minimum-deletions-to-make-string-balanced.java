@@ -3,7 +3,10 @@ class Solution {
         
         int[] bBefore= new int[s.length()];
         int[] aAfter= new int[s.length()];
-        int countA= (int)s.chars().filter(x->x=='a').count();
+        int countA= 0;//(int)s.chars().filter(x->x=='a').count();
+        for(char c:s.toCharArray()){
+            if(c=='a')countA++;
+        }
         int countB= s.length()-countA;
 
         int curA=0, curB=0;
