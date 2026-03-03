@@ -22,6 +22,7 @@ class Solution {
             res.add('1');
             res.addAll(rev);
             i++;
+            if(res.size() > k)break;
         }
         return res.get(k-1);
     }
