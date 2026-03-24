@@ -22,25 +22,25 @@ class Solution {
             // rolMul[i] = pre;
         }
 
-        for(int i=0;i<row;i++){
-            //int pre=1;
-            for(int j=0;j<col;j++){
-                System.out.print(prefix[i][j]+" ");
-            }
-            System.out.println();
-        }
-        System.out.println("--=-=-=---");
-         for(int i=0;i<row;i++){
-            //int pre=1;
-            for(int j=0;j<col;j++){
-                System.out.print(suffix[i][j]+" ");
-            }
-            System.out.println();
-        }
-        System.out.println("----=-=-=-----");
-        for(int i=0;i<row;i++){
-             System.out.print(rowMul[i]+" ");
-        }
+        // for(int i=0;i<row;i++){
+        //     //int pre=1;
+        //     for(int j=0;j<col;j++){
+        //         System.out.print(prefix[i][j]+" ");
+        //     }
+        //     System.out.println();
+        // }
+        // System.out.println("--=-=-=---");
+        //  for(int i=0;i<row;i++){
+        //     //int pre=1;
+        //     for(int j=0;j<col;j++){
+        //         System.out.print(suffix[i][j]+" ");
+        //     }
+        //     System.out.println();
+        // }
+        // System.out.println("----=-=-=-----");
+        // for(int i=0;i<row;i++){
+        //      System.out.print(rowMul[i]+" ");
+        // }
         long[] rowPref= new long[row];
         long[] rowsuf= new long[row];
         long p=1;
@@ -53,15 +53,15 @@ class Solution {
             rowsuf[i]=p;
             p=(p*rowMul[i])%12345;
         }
-        System.out.println("----=-row pref=-=-----");
-        for(int i=0;i<row;i++){
-             System.out.print(rowPref[i]+" ");
-        }
-        System.out.println("----=row suf-=-=-----");
-        for(int i=0;i<row;i++){
-             System.out.print(rowsuf[i]+" ");
-        }
-        System.out.println();
+        // System.out.println("----=-row pref=-=-----");
+        // for(int i=0;i<row;i++){
+        //      System.out.print(rowPref[i]+" ");
+        // }
+        // System.out.println("----=row suf-=-=-----");
+        // for(int i=0;i<row;i++){
+        //      System.out.print(rowsuf[i]+" ");
+        // }
+        // System.out.println();
         
         for(int i=0;i<row;i++){
             //int pre=1;
