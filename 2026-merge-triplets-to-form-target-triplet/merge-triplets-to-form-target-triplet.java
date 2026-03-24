@@ -1,32 +1,17 @@
 class Solution {
-    public boolean mergeTriplets(int[][] triplets, int[] target) {
-        int row= triplets.length;
+    public boolean mergeTriplets(int[][] t, int[] target) {
+        int row= t.length;
         Set<Integer> set= new HashSet<>();
-        for(int i=0;i<3;i++){
-            int max= 0;
-            for(int j=0; j<row; j++){
-                if(triplets[j][i] > target[i])
-                    set.add(j);
-            }
-            //if(max > target[i])return false;
-        }
-        int[][] arr= new int[row-set.size()][3];
-        int rr=0;
         for(int i=0;i<row;i++){
-            if(!set.contains(i)){
-                for(int j=0;j<3;j++){
-                    arr[rr][j] = triplets[i][j];
-                }
-                rr++;
+            if(t[i][0] > target[0]  || t[i][1] > target[1] || t[i][2] > target[2]){
+                continue;
+            }
+            for(int j=0;j<3;j++){
+                if(t[i][j]== target[j])set.add(j);
             }
         }
-        for(int i=0;i<3;i++){
-            int max=0;
-            for(int j=0; j<arr.length; j++){
-                max= Math.max(max, arr[j][i]);
-            }
-            if(max != target[i])return false;
-        }
-        return true;
+        if(set.size() == 3)
+            return true;
+        return false;
     }
 }
