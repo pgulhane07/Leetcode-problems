@@ -4,7 +4,7 @@ class Solution {
 
         Deque<Integer> dq= new ArrayDeque<>();
         dq.add(start);
-        System.out.println(dq);
+        //System.out.println(dq);
         while(!dq.isEmpty()){
             int x= dq.poll();
             //if(arr[x]==0)return true;
@@ -18,7 +18,7 @@ class Solution {
                 visited[x-arr[x]]= true;
                 dq.add(x-arr[x]);
             }
-            System.out.println(dq);
+           // System.out.println(dq);
         }
         return false;
     }
