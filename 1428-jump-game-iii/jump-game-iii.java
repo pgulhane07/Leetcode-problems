@@ -7,12 +7,14 @@ class Solution {
         System.out.println(dq);
         while(!dq.isEmpty()){
             int x= dq.poll();
-            if(arr[x]==0)return true;
+            //if(arr[x]==0)return true;
             if(x+arr[x] < arr.length && !visited[x+arr[x]]){
+                if(arr[x+arr[x]]==0)return true;
                 visited[x+arr[x]]= true;
                 dq.add(x+arr[x]);
             }
             if(x-arr[x] >=0  && !visited[x-arr[x]]){
+                if(arr[x-arr[x]]==0)return true;
                 visited[x-arr[x]]= true;
                 dq.add(x-arr[x]);
             }
