@@ -37,13 +37,13 @@ class Solution {
             int parent= d[0];
             int child = d[1];
             isChild.add(child);
-            System.out.println(d[2]);
+           // System.out.println(d[2]);
             if(map.containsKey(parent)){
                 TreeNode p = map.get(parent);
                 TreeNode c = new TreeNode(child);
-                if(map.containsKey(child)){
-                    c = map.get(child);
-                }
+                // if(map.containsKey(child)){
+                //     c = map.get(child);
+                // }
                 // else{
                 //     TreeNode c = new TreeNode(child);
                 // }
@@ -62,9 +62,9 @@ class Solution {
             else{
                 TreeNode p = new TreeNode(parent);
                 TreeNode c = new TreeNode(child);
-                if(map.containsKey(child)){
-                    c = map.get(child);
-                }
+                // if(map.containsKey(child)){
+                //     c = map.get(child);
+                // }
                 if(d[2] == 1){
                     p.left= c;
                    // System.out.println("left else");
