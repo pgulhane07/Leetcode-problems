@@ -1,28 +1,29 @@
 class Solution {
     public int[] pivotArray(int[] nums, int pivot) {
-        int less=0, more=0, eq=0;
-        for(int n:nums){
-            if(n < pivot)less++;
-            else if(n > pivot)more++;
+        List<Integer> left = new ArrayList<>();
+        List<Integer> right = new ArrayList<>();
+        int pcnt=0;
+        for(int n :nums){
+            if(n<pivot){
+                left.add(n);
+            }
+            else if(n>pivot)right.add(n);
             else{
-                eq++;
+                pcnt++;
             }
         }
         int res[]= new int[nums.length];
-        int p=0;
-        for(int n :nums){
-            if(n < pivot){
-                res[p++] = n;
-            }
+        int k=0;
+        for(int n:left){
+            res[k++]= n ;
         }
-        for(int i=0;i<eq;i++){
-            res[p++]= pivot;
+        for(int i=0;i<pcnt;i++){
+            res[k++]=pivot;
         }
-        for(int n :nums){
-            if(n > pivot){
-                res[p++] = n;
-            }
+        for(int n:right){
+            res[k++]= n ;
         }
         return res;
+
     }
 }
