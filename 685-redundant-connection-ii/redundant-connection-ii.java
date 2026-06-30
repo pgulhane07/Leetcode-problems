@@ -40,7 +40,7 @@ class Solution {
             if(par[e[1]] != 0){
                 node1= new int[]{par[e[1]],e[1]};
                 node2= new int[]{e[0],e[1]};
-                e[1]= -1;
+                // e[1]= -1;
                 break;
             }
             else{
@@ -49,7 +49,7 @@ class Solution {
 
         }
         for(int[] e: edges){
-            if(e[1]== -1)continue;
+            if(node2!=null && e[0]== node2[0] && e[1]== node2[1])continue;
             if(d.getParent(e[0]) == d.getParent(e[1])){
                 if(node1== null)return e;
                 return node1;
