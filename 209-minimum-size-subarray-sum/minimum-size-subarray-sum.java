@@ -4,7 +4,7 @@ class Solution {
         int sum=0;
         int length = Integer.MAX_VALUE;
 
-        while(j< nums.length){
+        for(j=0; j < nums.length; j++){
 
             sum+= nums[j];
             
@@ -14,7 +14,7 @@ class Solution {
                 length = Math.min(length, j-i+1);
                 i++;
             }
-            j++;
+            // j++;
         }
         // while( i < nums.length && sum > target){
         //     sum -= nums[i];
